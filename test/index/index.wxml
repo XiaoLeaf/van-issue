@@ -1,0 +1,14 @@
+<demo-block title="粘性布局">
+	<van-tabs sticky>
+		<van-tab scroll-top="indexScrollTop" wx:for="{{ tabs4 }}" wx:key="index" title="{{ '标签 ' + item }}">
+			<van-index-bar scroll-top="{{ indexScrollTop }}" z-index="0" sticky-offset-top="{{44}}" index-list="{{indexList}}">
+				<view wx:for="{{10}}" wx:key="index">
+					<van-index-anchor index="{{index+1}}">标题{{index+1}}</van-index-anchor>
+					<view wx:for="{{3}}" wx:key="index" class="content">
+						{{ '内容' + item }}
+					</view>
+				</view>
+			</van-index-bar>
+		</van-tab>
+	</van-tabs>
+</demo-block>
